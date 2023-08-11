@@ -1,5 +1,9 @@
 ## @pixelpizza/builders
 
+### Dependencies
+
+- [@pixelpizza/assert](https://npmjs.com/package/@pixelpizza/assert) - Assertions of builder attributes
+
 ### File Structure
 
 ```ps
@@ -51,16 +55,22 @@ src/
 
 ```typescript
 class EmbedBuilder implements Builder<APIEmbed> {
-  #data: APIEmbed;
+  @Type("string")
+  readonly #title?: string;
+
+  // ...other properties
 
   public setTitle(title: string) {
-    this.#data.title = title;
+    this.#title = title;
   }
 
   // ...other setters
 
   public build(): APIEmbed {
-    return this.#data;
+    return {
+      title: this.#title,
+      // ...other properties
+    };
   }
 }
 ```
