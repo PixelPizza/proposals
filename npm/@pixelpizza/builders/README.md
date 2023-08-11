@@ -60,8 +60,9 @@ class EmbedBuilder implements Builder<APIEmbed> {
 
   // ...other properties
 
-  public setTitle(title: string) {
+  public setTitle(title: string): this {
     this.#title = title;
+    return this;
   }
 
   // ...other setters
