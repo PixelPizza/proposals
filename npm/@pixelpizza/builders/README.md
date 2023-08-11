@@ -1,6 +1,6 @@
-# @pixelpizza/builders
+## @pixelpizza/builders
 
-## File Structure
+### File Structure
 
 ```ps
 src/
@@ -45,9 +45,9 @@ src/
   index.ts
 ```
 
-## Examples
+### Examples
 
-### EmbedBuilder
+#### EmbedBuilder
 
 ```typescript
 class EmbedBuilder implements Builder<APIEmbed> {
